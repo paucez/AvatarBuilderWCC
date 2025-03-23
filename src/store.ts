@@ -3,6 +3,7 @@ import PocketBase from "pocketbase";
 import { MeshStandardMaterial, Color } from "three";
 import { randInt } from "three/src/math/MathUtils.js";
 
+
 type PoseType = "Idle" | "Chill" | "Cool" | "Punch" | "Ninja" | "King" | "Busy";
 type ModeType = "photo" | "customize";
 type Category = {
@@ -73,6 +74,7 @@ export const UI_MODES: Record<ModeType, ModeType> = {
 };
 
 export const pb = new PocketBase(pocketBaseUrl);
+
 
 export const useConfiguratorStore = create<ConfiguratorState>((set, get) => ({
   loading: true,
